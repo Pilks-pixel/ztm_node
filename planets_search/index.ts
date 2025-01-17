@@ -2,16 +2,24 @@ import { createReadStream } from "node:fs";
 import { parse } from "csv-parse";
 
 var csvFilePath = "./kepler-data.csv";
-var habitablePlanets = [];
+var habitablePlanets: Planet[] = [];
 var parser = parse({
 	comment: "#",
 	columns: true,
 });
 
+type Planet = {
+	kepoi_name: string;
+	koi_disposition: string;
+	koi_insol: number;
+	koi_prad: number;
+};
+
 parser.on("readable", function () {
-	let record;
+	let record:Planet | null;
 	while ((record = parser.read()) !== null) {
 		if (isHabitablePlanet(record)) {
+			console.log(record)
 			habitablePlanets.push(record);
 		}
 	}
@@ -30,7 +38,7 @@ createReadStream(csvFilePath)
 		console.log(error);
 	});
 
-function isHabitablePlanet(planet) {
+function isHabitablePlanet(planet: Planet): boolean {
 	return (
 		planet["koi_disposition"] === "CONFIRMED" &&
 		planet["koi_insol"] > 0.36 &&
