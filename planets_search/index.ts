@@ -27,7 +27,7 @@ parser.on("readable", function () {
 
 parser.on("end", function () {
 	console.log(`${habitablePlanets.length} Habitable planet(s) found!`);
-	for (let planet of habitablePlanets) {
+	for (const planet of habitablePlanets) {
 		console.log(planet.kepoi_name);
 	}
 });
