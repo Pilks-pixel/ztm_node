@@ -16,10 +16,10 @@ type Planet = {
 };
 
 parser.on("readable", function () {
-	let record:Planet | null;
+	let record: Planet | null;
 	while ((record = parser.read()) !== null) {
 		if (isHabitablePlanet(record)) {
-			console.log(record)
+			console.log(record);
 			habitablePlanets.push(record);
 		}
 	}
