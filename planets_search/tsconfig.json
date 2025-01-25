@@ -1,6 +1,6 @@
- {
-    "compilerOptions": {
-        "noEmit": true,
-        "baseUrl": "."
-    }
- }
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": "."
+  }
+}
