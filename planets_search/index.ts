@@ -9,7 +9,7 @@ var parser = parse({
 });
 
 type Planet = {
-  kepoi_name: string;
+  	kepoi_name: string;
   koi_disposition: string;
   koi_insol: number;
   koi_prad: number;
