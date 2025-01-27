@@ -63,3 +63,5 @@ function isHabitablePlanet(planet: Planet): boolean {
 // 	.on("error", err => {
 // 		console.log(err);
 // 	});
+
+export { isHabitablePlanet };
