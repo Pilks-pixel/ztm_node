@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json", // Can also extend the base monorepo config
+  "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": true
+    // These don't work with Node Test Runner, but do with Bun. Purely optional QoL
+    // "baseUrl": ".",
+    // "paths": {
+    //	"@src/*": ["../src/*"]
+    // },
+  },
+  "include": ["./**/*"]
+}
