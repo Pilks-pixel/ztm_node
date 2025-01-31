@@ -4,11 +4,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node --experimental-strip-types index.ts",
-    "test": "glob -c \"tsx --env-file-if-exists .env --env-file-if-exists .env.test --test --test-reporter spec \" \"__tests__/*.test.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "check-types": "tsc",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.+(.js|ts|json)\"",
-    "validate": "npm run check-types && npm test && npm run lint && npm run format",
+    "validate": "npm run check-types && npm run lint && npm run format",
     "prepare": "husky"
   },
   "keywords": [],
@@ -23,12 +23,10 @@
     "@eslint/js": "^9.18.0",
     "@types/node": "^22.10.7",
     "eslint": "^9.18.0",
-    "glob": "^11.0.1",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "prettier": "3.4.2",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
   }

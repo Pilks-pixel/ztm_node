@@ -19,7 +19,7 @@ parser.on("readable", function () {
   let record: Planet | null;
   while ((record = parser.read()) !== null) {
     if (isHabitablePlanet(record)) {
-      //   console.log(record);
+      console.log(record);
       habitablePlanets.push(record);
     }
   }
@@ -27,9 +27,9 @@ parser.on("readable", function () {
 
 parser.on("end", function () {
   console.log(`${habitablePlanets.length} Habitable planet(s) found!`);
-  //   for (const planet of habitablePlanets) {
-  //     console.log(planet.kepoi_name);
-  //   }
+  for (const planet of habitablePlanets) {
+    console.log(planet.kepoi_name);
+  }
 });
 
 createReadStream(csvFilePath)

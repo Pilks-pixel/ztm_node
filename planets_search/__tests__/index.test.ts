@@ -1,4 +1,4 @@
-import { isHabitablePlanet, Planet, parser } from "../index";
+import { isHabitablePlanet, Planet, parser } from "../index.ts";
 import test from "node:test";
 import { strict as assert } from "node:assert/strict";
 import { Readable } from "node:stream";
